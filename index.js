@@ -2,6 +2,8 @@ const fs = require('node:fs');
 const fsp = require('node:fs/promises');
 const http = require('node:http');
 
+const PORT = process.env.PORT ?? 3000;
+
 const responseHeaders = {
     'json': {
         'Content-Type': 'application/json',
@@ -72,6 +74,6 @@ const server = http.createServer((req, res)=>{
     }
 });
 
-server.listen(3000, ()=>{
+server.listen(PORT, ()=>{
     console.log(`REST API server initialized in port ${server.address().port}`);
 });

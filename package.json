@@ -4,7 +4,7 @@
   "description": "node rest api using http built-in module",
   "main": "index.js",
   "scripts": {
-    "dev:1": "nodemon index.js",
+    "dev:1": "PORT=3000 nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
